@@ -1,0 +1,8 @@
+.btn-color-option {
+    width: 100px;
+    height: 35px;
+    margin-bottom: 10px;
+    border: 1px #d8d8d8 solid;
+    cursor: pointer;
+    border-radius: 2px;
+}

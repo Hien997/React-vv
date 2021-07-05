@@ -1,0 +1,9 @@
+.btn.disabled {
+  cursor: auto;
+}
+.barcode > img {
+  max-width: 100% !important;
+}
+.barcode {
+  text-align: center;
+}

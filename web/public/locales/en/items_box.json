@@ -1,0 +1,21 @@
+{
+  "common_list_unit_box": "List Unit type",
+  "common_create_unit_type": "Create Unit type",
+  "item_kits_no_unittype_to_display": "No Unit type to display",
+  "category_basic_information": "Unit type information",
+  "label_unit_name": "Unit type name",
+  "label_unit_enable": "Enable",
+  "label_unit_disable": "Disable",
+  "label_unit_status": "Status",
+  "category_unit_name_required": "Unit type name is a required field",
+
+  "items_box_confirm_delete": "Do you want delete this Unit type?",
+  "items_unit_none_selected": "Please choice an Unit type do you want delete.",
+  "unit_successful_deleted": "You have been delete ",
+  "unit_one_or_multiple": "successfully.",
+  "unit_cannot_be_deleted": "You have been delete un successfully.",
+
+  "unit_successful_adding": "You have successfully added unit type",
+  "unit_successful_updating": "You have successfully updated unit type",
+  "unit_error_adding_updating": "Error adding/updating unit type"
+}

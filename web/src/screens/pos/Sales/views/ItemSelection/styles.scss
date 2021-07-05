@@ -1,0 +1,62 @@
+@import '../../../../../scss/common-color';
+
+.customer-sales {
+  &__item-selection {
+    input {
+      height: 40px;
+    }
+
+    &--service-group {
+      max-width: 145px;
+      ul {
+        list-style: none;
+        padding: 0px;
+        margin-right: 10px;
+        li {
+          height: 90px;
+          width: 115px;
+          font-size: 20px;
+          font-weight: bold;
+          background-color: $main-color;
+          margin-bottom: 5px;
+          line-height: 20px;
+          box-shadow: -2px 3px 4px 0 rgba(0, 0, 0, 0.25);
+          cursor: pointer;
+
+          &.active {
+            background-color: #ffffff;
+            color: $main-color;
+            border: $main-color 1px solid;
+          }
+        }
+      }
+    }
+
+    &--service-table {
+      background-color: #fafafa;
+      padding: 5px 10px;
+      border-radius: 3px;
+      max-width: calc(100% - 125px);
+      height: 563px;
+
+      .card {
+        display: inline-block;
+        height: 75px;
+        width: 140px;
+        background-color: #f2f2f2;
+        margin: 10px;
+
+        .card-body {
+          padding: 10px;
+          text-align: center;
+
+          span {
+            border-radius: 5px;
+            background-color: $main-color;
+            padding: 0px 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "login_login": "Login",
+  "close_login": "Main Menu",
+  "login_username": "Username",
+  "login_password": "Password",
+  "login_invalid_username_and_password": "Invalid username/password",
+  "login_invalid_store_name": "Invalid store name",
+  "login_version": "Version",
+  "login_stored": "Store Code",
+  "login_stored_name": "Store Name",
+  "store_code_submit": "Store Submit"
+}

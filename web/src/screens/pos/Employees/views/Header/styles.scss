@@ -1,0 +1,45 @@
+@import '../../../../../scss/common-color';
+
+.pos-employee-list .pos-employees-header {
+  height: 80px;
+  background-color: #e0e0e0;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .employees-clock__date {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .employees-clock__time {
+    border-bottom: $red-color 1px solid;
+
+    span:nth-child(1) {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 14px;
+    }
+    span:nth-child(2) {
+      font-weight: 600;
+      font-size: 12px;
+    }
+  }
+  .employees-store-name {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .btn-clock-in-out{
+    width: 200px;
+    height: 65px;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+    background-color: $sub-main-color;
+
+    i {
+      font-size: 30px;
+    }
+    span {
+      font-size: 26px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import '../../../../../scss/common-color';
+
+.pos-employee-list .pos-employees-list {
+  height: calc(100vh - 285px);
+  background-color: $dark-white-color;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 15px;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      cursor: pointer;
+      margin: 15px 15px 0;
+
+      .employee-card-container {
+        .card {
+          width: 200px;
+          height: 150px;
+          box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.25);
+          background-color: #fff9f9;
+
+          .card-body {
+            padding: 10px;
+
+            .employee-order-no {
+              width: 40px;
+              height: 40px;
+              box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+              background-color: #2f80ed;
+              position: absolute;
+              top: 0;
+              left: 0;
+              text-align: center;
+              vertical-align: middle;
+              line-height: 40px;
+              border-radius: 3px 0px 20px;
+              font-size: 20px;
+              font-weight: bold;
+              color: #ffffff;
+            }
+            .employee-avatar {
+              text-align: center;
+              width: 54px;
+              height: 54px;
+              border-radius: 50%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              border: #bdbdbd 0.5px solid;
+            }
+            .employee-name {
+              font-size: 20px;
+              font-weight: bold;
+              line-height: 0.9;
+              text-align: center;
+              color: #4f4f4f;
+              margin-top: 10px;
+            }
+          }
+
+          .card-footer {
+            height: 50px;
+
+            .employee-money-sign {
+              width: 16px;
+              height: 16px;
+              line-height: 0.9;
+              text-align: left;
+              background-color: #f2c94c;
+              border-radius: 50%;
+            }
+            .employee-money-number {
+              font-size: 24px;
+              line-height: 0.9;
+              text-align: right;
+              color: #4f4f4f;
+            }
+          }
+        }
+      }
+
+      &.inactive {
+        .employee-order-no,
+        .employee-money-sign {
+          background-color: #bdbdbd !important;
+        }
+      }
+    }
+  }
+}

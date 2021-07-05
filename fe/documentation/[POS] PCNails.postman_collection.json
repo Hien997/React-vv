@@ -1,0 +1,2129 @@
+{
+	"info": {
+		"_postman_id": "29faa831-00fa-440a-b046-84fbb650e77b",
+		"name": "[POS] PCNails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@pcnails.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "PCNails@12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/login",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "38f902c3-4de1-41f8-acf6-06545121b1a0",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "314299",
+									"type": "text"
+								},
+								{
+									"key": "mode",
+									"value": "register",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/verify-code",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"verify-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listing Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/users?_start=0&_end=10&_sort=created_at",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "_start",
+									"value": "0"
+								},
+								{
+									"key": "_end",
+									"value": "10"
+								},
+								{
+									"key": "_sort",
+									"value": "created_at"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/logout",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "PCNails@12345",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "PCNails@12345",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "PCNails@12345",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/change-pass",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"change-pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Hunty",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "App",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "nguyenthanhtrunganh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0918237192",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "03/23/1990",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/register",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "ads@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Hunty",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Mobile",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "093857887",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "03/20/1992",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/users/46a4c997-094b-4dd7-afe5-fb28c39d7b71",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"46a4c997-094b-4dd7-afe5-fb28c39d7b71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profiles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "user1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "UsernameUpdated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/profile",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "user1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "UsernameUpdated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/users/97952514-cd51-4454-a3f7-5457c4924ada",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"97952514-cd51-4454-a3f7-5457c4924ada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/users/9038c394-4be6-4ec4-a93d-a4672d221d79",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"9038c394-4be6-4ec4-a93d-a4672d221d79"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Get Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/categories?_start=0&_end=3&_field=language&_order=ASC&_query=vi",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "_start",
+									"value": "0"
+								},
+								{
+									"key": "_end",
+									"value": "3"
+								},
+								{
+									"key": "_field",
+									"value": "language"
+								},
+								{
+									"key": "_order",
+									"value": "ASC"
+								},
+								{
+									"key": "_query",
+									"value": "vi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/categories/21",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "published",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Title2",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Content testing",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/categories",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/categories/22?_language=en",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"22"
+							],
+							"query": [
+								{
+									"key": "_language",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "published",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "hi",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Title Updated",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "content",
+									"value": "Content Updated",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "categoriesTranslation_Id",
+									"value": "19",
+									"type": "text"
+								}
+							],
+							"options": {
+								"urlencoded": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/categories/22",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"22"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get Listing Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU4Nzk1NzE4NywiZXhwIjoxNTg3OTYwNzg3LCJuYmYiOjE1ODc5NTcxODcsImp0aSI6ImxLNUhlU3VYczVVMGhqek4iLCJzdWIiOiIzMzU3NDMzOS03NjIyLTQxNWEtYjU5MC0zMWMxODRjMGFjNWUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6bnVsbH0.QewhIFHR64vkTMZbpPXTlYULQ8oW2DWzkz69f8FepTE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/products/?_end=3&_keysort=3&_order=ASC&_query=",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "_end",
+									"value": "3"
+								},
+								{
+									"key": "_keysort",
+									"value": "3"
+								},
+								{
+									"key": "_order",
+									"value": "ASC"
+								},
+								{
+									"key": "_query",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product Item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU4Nzk1NzE4NywiZXhwIjoxNTg3OTYwNzg3LCJuYmYiOjE1ODc5NTcxODcsImp0aSI6ImxLNUhlU3VYczVVMGhqek4iLCJzdWIiOiIzMzU3NDMzOS03NjIyLTQxNWEtYjU5MC0zMWMxODRjMGFjNWUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6bnVsbH0.QewhIFHR64vkTMZbpPXTlYULQ8oW2DWzkz69f8FepTE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/products/948497ee-67de-4eaa-a1cb-1ea9bb194d6c",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"948497ee-67de-4eaa-a1cb-1ea9bb194d6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU4Nzk1NzE4NywiZXhwIjoxNTg3OTYwNzg3LCJuYmYiOjE1ODc5NTcxODcsImp0aSI6ImxLNUhlU3VYczVVMGhqek4iLCJzdWIiOiIzMzU3NDMzOS03NjIyLTQxNWEtYjU5MC0zMWMxODRjMGFjNWUiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6bnVsbH0.QewhIFHR64vkTMZbpPXTlYULQ8oW2DWzkz69f8FepTE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/products/948497ee-67de-4eaa-a1cb-1ea9bb194d6c",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"948497ee-67de-4eaa-a1cb-1ea9bb194d6c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU4Nzk3NzAwOCwiZXhwIjoxNTg3OTgwNjA4LCJuYmYiOjE1ODc5NzcwMDgsImp0aSI6ImxHZjVsNlZvZkNsNjVpMEwiLCJzdWIiOiJlZDk0NmNmMy04YTI2LTRkNGUtOTRhNC0zMGJhNDY2OTZmZDkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6bnVsbH0.IIlhE5wRs5opLe4QSASyeizXOi-9ti7M9kfuegJIXiw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "supplier_id",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "product[inv][93e279fb-9e05-47f1-ad2f-4cf8a1825d10][comment]",
+									"value": "comment update five time",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][114b734d-f42d-439a-b7af-2633a5703213][quantity]",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "product[upload][dd8f6fb1-cacf-4614-b56b-9eaf250704b1][sort_order]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product[point][604a150b-47da-4227-900c-e9d6bec815dd][points]",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "product[special][4eebcec6-c934-4011-8dbd-679af47cfbbd][price]",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "product[category][64f9d012-b73a-4fdf-8888-4fb85024f9c4][category_id]",
+									"value": "c371ae5b-2702-432c-bc5b-7e9887d446eb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/products/bad1fb7c-7ec1-44f4-8b27-a1d3e137c587",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"bad1fb7c-7ec1-44f4-8b27-a1d3e137c587"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU4Nzk3NDcwNSwiZXhwIjoxNTg3OTc4MzA1LCJuYmYiOjE1ODc5NzQ3MDUsImp0aSI6IjEyWVNoejFvY3dVY3RWdXQiLCJzdWIiOiJlZDk0NmNmMy04YTI2LTRkNGUtOTRhNC0zMGJhNDY2OTZmZDkiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3Iiwicm9sZSI6bnVsbH0.HLSSo7rTl1OOLGXPmHxzWfUq_Hc24AZUmevIu_F9XVo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sku",
+									"value": "unknow",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ha lan bich",
+									"type": "text"
+								},
+								{
+									"key": "featured_image",
+									"type": "file",
+									"src": "/D:/Images/Camera Roll/1489548467375.jpg"
+								},
+								{
+									"key": "user_id",
+									"value": "638a8bda-9512-448b-bd87-c3bc39fb169a",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "638a8bda-9512-448b-bd87-c3bc39fb169a",
+									"description": "Remove category_id này",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "638a8bda-9512-448b-bd87-c3bc39fb169a",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.32",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Images/Camera Roll/1493430597028.jpg"
+								},
+								{
+									"key": "sort_order",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "points",
+									"value": "82",
+									"type": "text"
+								},
+								{
+									"key": "product[taxes][0]",
+									"value": "1",
+									"description": "ID Taxes",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product[taxes][2]",
+									"value": "2",
+									"description": "ID Taxes",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product[inv][0][comment]",
+									"value": "abc",
+									"type": "text"
+								},
+								{
+									"key": "product[inv][0][inv_stock]",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][0][customer_group_id]",
+									"value": "638a8bda-9512-448b-bd87-c3bc39fb169a",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][0][quantity]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][0][price]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][0][date_start]",
+									"value": "2020-10-20",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][0][date_end]",
+									"value": "2020-10-25",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][1][customer_group_id]",
+									"value": "bf10ff56-b3d7-4465-b9c7-99cd0ec726d8",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][1][quantity]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][1][price]",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][1][date_start]",
+									"value": "2020-04-20",
+									"type": "text"
+								},
+								{
+									"key": "product[discount][1][date_end]",
+									"value": "2020-04-29",
+									"type": "text"
+								},
+								{
+									"key": "product[upload][0][image]",
+									"type": "file",
+									"src": "/D:/Images/Bốn mùa/bon-mua-wallpaper (19).jpg"
+								},
+								{
+									"key": "product[upload][0][sort_order]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product[upload][1][image]",
+									"type": "file",
+									"src": "/D:/Images/Bốn mùa/bon-mua-wallpaper (10).jpg"
+								},
+								{
+									"key": "product[upload][1][sort_order]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "product[point][0][customer_group_id]",
+									"value": "edd61bf9-242a-406c-b60d-ebbf45f65a94",
+									"type": "text"
+								},
+								{
+									"key": "product[point][0][point]",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "product[special][0][customer_group_id]",
+									"value": "edd61bf9-242a-406c-b60d-ebbf45f65a94",
+									"type": "text"
+								},
+								{
+									"key": "product[special][0][price]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "product[special][0][date_start]",
+									"value": "2020-10-20",
+									"type": "text"
+								},
+								{
+									"key": "product[special][0][date_end]",
+									"value": "2020-10-25",
+									"type": "text"
+								},
+								{
+									"key": "product[category][0][category_id]",
+									"value": "edd61bf9-242a-406c-b60d-ebbf45f65a94",
+									"type": "text"
+								},
+								{
+									"key": "product[category][1][category_id]",
+									"value": "f252fae5-50e1-41d8-b4d1-6b1f0ed77a31",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/products",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "Get Settings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/settings/4eb4dc64-83dd-11ea-bc55-0242ac130003",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"settings",
+								"4eb4dc64-83dd-11ea-bc55-0242ac130003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add & Update  Settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "setting[general][date_format]",
+									"value": "middle_endian",
+									"description": "30-12-2000, ",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][time_format]",
+									"value": "12_hour",
+									"description": "24_hour",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][number_of_items_per_page]",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][policy_cc_term]",
+									"value": "I agree to pay the above total amount according to the card issuer agreement. AAA",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][discount_manager]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][discount_ticket]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][discount_item]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][discount_employee]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][active_coupon]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][checkin_employee_daily]",
+									"value": "",
+									"description": "Is false auto checkin for employees",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][checkin_sale_transaction_employee]",
+									"value": "",
+									"description": "Login code when go POS complete transaction",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][checkin_sale_transaction_employee]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][employee_commission_display]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][by_pass_login]",
+									"value": "",
+									"description": "Auto login store POS",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][share_customer_loyalty]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][share_giftcard_loyalty]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][share_categories]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][google_calendar_sync]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][booking_data_temp]",
+									"value": "",
+									"description": "Table temporary services in booking appt",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][giftcard_commission]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][giftcard_commission_type]",
+									"value": "percent",
+									"description": "percent,amount",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][disc_deal_report]",
+									"value": "both",
+									"description": "owner: Owner Only, employee: Emp. Only",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][currency_symbol]",
+									"value": "$",
+									"type": "text"
+								},
+								{
+									"key": "setting[general][employee_deductible_tip]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][number_taxes]",
+									"value": "1,2",
+									"description": "[tax_class_id] tax class id = 1 and 2",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][text_taxs_display]",
+									"value": "Tax",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][indian_tax]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][calculation_tax]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][calculation_tax_on_tax]",
+									"value": "0",
+									"description": "calulator tax on tax",
+									"type": "text"
+								},
+								{
+									"key": "setting[taxes][calculation_tax_on_tax]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][unit_money_to_point]",
+									"value": "",
+									"description": "$1 need to convert to point?",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][unit_point_to_money]",
+									"value": "",
+									"description": "1 point need to convert to money?",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][point_for_cash]",
+									"value": "1",
+									"description": "x Rewarding Points",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][points_exclude][point_minus_giftcard]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][points_exclude][point_minus_taxes]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][points_exclude][point_minus_tip]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][points_exclude][point_minus_paid_point]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[reward][memebership_calculation_point]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][payment_getway]",
+									"value": "mercuryemv",
+									"description": "mercuryemv, cardconnect",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][payment_workstation]",
+									"value": "Workstation 1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][merchant_id]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][merchant_pwd]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][terminal_model]",
+									"value": "dejavooz11",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][cm_register_id]",
+									"value": "4244520",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][cm_ip_address]",
+									"value": "spinpos.net",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][cm_port]",
+									"value": "80/spin",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][cm_auth_key]",
+									"value": "qXrezzY6CA",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][cm_st_port]",
+									"value": "5555",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][pos_code]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment][getway][0][printer_name]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][payment_printer_merchant]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][payment_printer_customer]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][creditcard_online]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][payment_mode]",
+									"value": "0",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][creditcard_mode_fee]",
+									"value": "",
+									"description": "1: SurCharge fee, 2: Service Charge Fee, 0: None",
+									"type": "text"
+								},
+								{
+									"key": "setting[payment_options][creditcard_getway_fee]",
+									"value": "2",
+									"description": "%",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][path_printer_name]",
+									"value": "80mm Series Printer",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_customer]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_employee]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_owner]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_customer_copy]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_employee_copy]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_after_sale_owner_copy]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_signature]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_tip_creditcard]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_display_address_line]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_display_phone_line]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_display_barcode_line]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_display_footer_line]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][print_display_footer_line]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[printer][src_bg_top_receipt_1]",
+									"type": "file",
+									"src": "/C:/Users/nttanh/OneDrive/Desktop/94625690_528252518084842_2136482115041099776_n.jpg"
+								},
+								{
+									"key": "setting[printer][src_bg_top_receipt_2]",
+									"type": "file",
+									"src": "/C:/Users/nttanh/OneDrive/Desktop/94756470_1497870363717511_5757427798004203520_n.jpg"
+								},
+								{
+									"key": "setting[printer][src_bg_bottom_receipt_1]",
+									"type": "file",
+									"src": "/C:/Users/nttanh/OneDrive/Desktop/95135799_231649331509247_116854605446381568_n.jpg"
+								},
+								{
+									"key": "setting[printer][src_bg_bottom_receipt_2]",
+									"type": "file",
+									"src": "/C:/Users/nttanh/OneDrive/Desktop/94605428_279224733085942_798884008913010688_n.jpg"
+								},
+								{
+									"key": "setting[walkin][walk_in_bg]",
+									"type": "file",
+									"src": "/C:/Users/nttanh/OneDrive/Desktop/95135799_231649331509247_116854605446381568_n.jpg"
+								},
+								{
+									"key": "setting[walkin][socket_server_push]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[walkin][show_avatar_walk_in_employee]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[walkin][walk_in_messages_success]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[reviews][active_customer_reviews]",
+									"value": "0",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[reviews][vote_number_send_message]",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "setting[reviews][customer_reviews_pages]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[booking][color_add_new]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[booking][color_edit]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[booking][color_walkin_add]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[booking][color_recurring]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][display_employee_amount_tt]",
+									"value": "",
+									"description": "0,1",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][new]",
+									"value": "#1b87e2",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][n]",
+									"value": "#00a6ea",
+									"description": "Nomarl",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][n_m]",
+									"value": "0",
+									"description": "Redure turn number",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][cr]",
+									"value": "#fd0060",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][cr_m]",
+									"value": "0.5",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][b]",
+									"value": "#e76319",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][b_m]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][wk]",
+									"value": "#f69f36",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][wk_m]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][c]",
+									"value": "#c1f593",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][i]",
+									"value": "#fef339",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][bg_taketurn][d]",
+									"value": "#00af33",
+									"type": "text"
+								},
+								{
+									"key": "setting[taketurn][take_turn_before_commission]",
+									"value": "3",
+									"description": "1: Before Commssion, 2: After Commssion, 3: Between Commssion",
+									"type": "text"
+								},
+								{
+									"key": "store_id",
+									"value": "4eb4dc64-83dd-11ea-bc55-0242ac130003",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/settings",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Settings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_id",
+									"value": "4eb4dc64-83dd-11ea-bc55-0242ac130003",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "booking",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/settings/delete",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"settings",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Listing Stores",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/stores?_start=0&_end=10&_sort=created_at",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"stores"
+							],
+							"query": [
+								{
+									"key": "_start",
+									"value": "0"
+								},
+								{
+									"key": "_end",
+									"value": "10"
+								},
+								{
+									"key": "_sort",
+									"value": "created_at"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_host_pos}}/api/stores/083fa4ea-b873-4e5e-af60-0292b67767de",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"stores",
+								"083fa4ea-b873-4e5e-af60-0292b67767de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "10965481-0580-464f-b850-4d7703c18d59",
+									"type": "text"
+								},
+								{
+									"key": "store_name",
+									"value": "Mot Hai Ba",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "AB",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "CD",
+									"type": "text"
+								},
+								{
+									"key": "store_domain",
+									"value": "mothaiba.com",
+									"type": "text"
+								},
+								{
+									"key": "effective_start",
+									"value": "2020-05-05 01:00:00",
+									"type": "text"
+								},
+								{
+									"key": "effective_end",
+									"value": "2025-05-05 01:00:00",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Vinh, Nghe An",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Vinh",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Central HIghlands",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "59000",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "091273112",
+									"type": "text"
+								},
+								{
+									"key": "fax",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "223",
+									"type": "text"
+								},
+								{
+									"key": "store_banner",
+									"type": "file",
+									"src": "/C:/Users/abc/Desktop/11.png"
+								},
+								{
+									"key": "store_logo",
+									"type": "file",
+									"src": "/C:/Users/abc/Desktop/22007511_1898144423535604_1729613675861305160_n.jpg"
+								},
+								{
+									"key": "timezone",
+									"value": "US/Central",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/stores",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "10965481-0580-464f-b850-4d7703c18d59",
+									"type": "text"
+								},
+								{
+									"key": "store_name",
+									"value": "Mot Hai Ba",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "AB",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "CD",
+									"type": "text"
+								},
+								{
+									"key": "store_domain",
+									"value": "mothaiba.com",
+									"type": "text"
+								},
+								{
+									"key": "effective_start",
+									"value": "2020-05-05 01:00:00",
+									"type": "text"
+								},
+								{
+									"key": "effective_end",
+									"value": "2025-05-05 01:00:00",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Vinh, Nghe An",
+									"description": "\n",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Vinh",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "IL",
+									"type": "text"
+								},
+								{
+									"key": "zipcode",
+									"value": "59000",
+									"type": "text"
+								},
+								{
+									"key": "telephone",
+									"value": "091273112",
+									"type": "text"
+								},
+								{
+									"key": "fax",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "223",
+									"type": "text"
+								},
+								{
+									"key": "store_banner",
+									"type": "file",
+									"src": "/C:/Users/abc/Desktop/11.png"
+								},
+								{
+									"key": "store_logo",
+									"type": "file",
+									"src": "/C:/Users/abc/Desktop/22007511_1898144423535604_1729613675861305160_n.jpg"
+								},
+								{
+									"key": "timezone",
+									"value": "US/Central",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "{{api_host_pos}}/api/stores/71f93767-27c8-4625-a0ee-ef1625a32bde",
+							"host": [
+								"{{api_host_pos}}"
+							],
+							"path": [
+								"api",
+								"stores",
+								"71f93767-27c8-4625-a0ee-ef1625a32bde"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

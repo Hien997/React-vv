@@ -1,0 +1,48 @@
+.customer-sales {
+  &__banner {
+    height: 100px;
+    box-shadow: 0 0 5px 0 #a7a7a7;
+    background-color: #fafafa;
+
+    .btn {
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 3px !important;
+      font-size: 14px;
+      background-color: #fafafa;
+    }
+
+    i {
+      font-size: 35px;
+    }
+    .banner-search {
+      .btn-new-customer {
+        box-shadow: -2px 0 5px 0 rgba(0, 0, 0, 0.25);
+        width: 140px;
+        height: 80px;
+      }
+
+      .search-info {
+        height: 40px;
+        width: 100%;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+        font-size: 18px;
+        padding: 2% 10px;
+      }
+
+      input {
+        height: 40px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        margin: 10px 5px;
+        width: 80px;
+        height: 80px;
+        padding: 0;
+      }
+    }
+  }
+}

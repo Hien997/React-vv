@@ -1,0 +1,47 @@
+.btn.disabled {
+  cursor: auto;
+}
+
+.image-card {
+  margin-bottom: 0;
+  height: calc(100% - 1rem);
+}
+
+.imageAvatar {
+  cursor: pointer;
+}
+
+.radioInline,
+.btnMargin
+{
+  margin-top: 15px;
+}
+.checkboxM{
+  margin-left: 2em;
+}
+
+.parentGroup{
+  display: table;
+  margin: 0 auto;
+}
+
+.pointRadioGroup{
+  display: flex;
+}
+
+.pointRadioGroup .radioLast{
+  margin-left: 2em;
+}
+
+.iconAvatar{
+  font-size: 5rem !important;
+}
+
+.itSeft,
+.isNotUse{
+  color: green;
+}
+
+.isUse{
+  color: red;
+}

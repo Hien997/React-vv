@@ -1,0 +1,33 @@
+@import '../../../../../scss/common-color';
+
+.pos-employee-list .pos-employees-footer {
+  height: 100px;
+  background-color: #fafafa;
+
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 10px;
+  width: 100%;
+  padding: 10px;
+
+  .btn {
+    width: 100%;
+    // width: auto;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fafafa;
+    height: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    i {
+      font-size: 36px;
+    }
+    div {
+      font-size: 18px;
+      font-weight: 550;
+      line-height: 0.9;
+      text-align: left;
+    }
+  }
+}

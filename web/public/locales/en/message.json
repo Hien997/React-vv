@@ -1,0 +1,21 @@
+{
+  "required": "{{fieldName}} is required.",
+  "number": "{{fieldName}} must be a valid number.",
+  "date": "{{fieldName}} must be a valid date.",
+  "email": "{{fieldName}} must be a valid email.",
+  "phone": "{{fieldName}} must be a valid phone.",
+  "url": "{{fieldName}} must be a valid url.",
+  "creditcard": "{{fieldName}} must be a valid credit card number.",
+
+  "length": "{{fieldName}} length must be {{length}}",
+  "min_length": "{{fieldName}} length can't be less than {{minLength}}.",
+  "max_length": "{{fieldName}} length can't be more than {{maxLength}}.",
+  "min_max_length": "{{fieldName}} length must be between {{minLength}} and {{maxLength}}.",
+
+  "min": "{{fieldName}} can't be less than {{min}}.",
+  "max": "{{fieldName}} can't be more than {{max}}.",
+  "min_max": "{{fieldName}} must be between {{min}} and {{max}}.",
+
+  "csv_file": "File must be a CSV file.",
+  "excel_file": "File must be a Excel file."
+}

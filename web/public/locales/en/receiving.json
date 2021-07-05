@@ -1,0 +1,38 @@
+{
+  "receivings_register": "Items Receiving",
+  "receivings_mode": "Receiving Mode",
+  "receivings_receiving": "Receive",
+  "receivings_return": "Return",
+  "receivings_total": "Total",
+  "receivings_cost": "Cost",
+  "receivings_quantity": "Qty.",
+  "receivings_discount": "Disc %",
+  "receivings_edit": "Edit",
+  "receivings_new_supplier": "New Supplier",
+  "receivings_supplier": "Supplier",
+  "receivings_select_supplier": "Select Supplier (Optional)",
+  "receivings_start_typing_supplier_name": "Type supplier's name...",
+  "receivings_unable_to_add_item": "Unable to add item to receiving",
+  "receivings_error_editing_item": "Error editing item",
+  "receivings_receipt": "Receivings Receipt",
+  "receivings_complete_receiving": "Finish",
+  "receivings_confirm_finish_receiving": "Are you sure you want to submit this receiving? This cannot be undone.",
+  "receivings_confirm_cancel_receiving": "Are you sure you want to clear this receiving? All items will cleared.",
+  "receivings_find_or_scan_item": "Find/Scan Item",
+  "receivings_find_or_scan_item_or_receipt": "Find/Scan Item OR Receipt",
+  "receivings_id": "Receiving ID",
+  "receivings_item_name": "Item Name",
+
+  "receivings_transaction_failed": "Receivings Transactions Failed",
+
+  "receivings_edit_receiving": "Edit Receiving",
+
+  "receivings_successfully_updated": "Receiving successfully updated",
+  "receivings_unsuccessfully_updated": "Receiving unsuccessfully updated",
+
+  "receivings_delete_entire_receiving": "Delete Entire Receiving",
+  "receivings_undelete_entire_sale": "Undelete entire receiving",
+  "receivings_undelete_confirmation": "Are you sure you want to undelete this receiving?",
+  "receivings_undelete_successful": "Receiving undelete successful",
+  "receivings_delete_unsuccessful": "Receivings delete unsucessful"
+}

@@ -1,0 +1,19 @@
+.buttonGrid {
+  display: inline-grid;
+  margin: auto;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.btnItems {
+  margin-bottom: 5px;
+}
+
+.btnPerSize {
+  display: block;
+}
+
+tr td:first-child,
+.columnVertical {
+  vertical-align: middle !important;
+}

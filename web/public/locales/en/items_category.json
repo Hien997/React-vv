@@ -1,0 +1,29 @@
+{
+  "common_list_category": "List Category",
+  "common_list_type_box": "List Unit Type",
+  "common_create_category": "Create Category",
+  "item_kits_no_category_to_display": "No category to display",
+  "category_basic_information": "Category information",
+  "label_category_name": "Category name",
+  "label_category_enable": "Enable",
+  "label_category_disable": "Disable",
+  "label_category_status": "Status",
+  "category_category_name_required": "Category name is a required field",
+  "type_category_name_required": "Type category name is a required field",
+
+  "label_category_parent": "Type Category",
+  "label_category_service": "Service",
+  "label_category_products": "Products",
+  "label_category_image": "Image",
+  "label_category_ordering": "Ordering",
+
+  "items_category_confirm_delete": "Do you want delete this category?",
+  "items_category_none_selected": "Please choice an items do you want delete.",
+  "category_successful_deleted": "You have been delete ",
+  "category_one_or_multiple": "successfully.",
+  "category_cannot_be_deleted": "You have been delete un successfully.",
+  "category_successful_adding": "You have been add successfully.",
+  "category_successful_updating": "You have been update successfully.",
+  "category_error_adding_updating": "You have been update un successfully.",
+  "category_upload_errors": "You have upload image un successfully."
+}

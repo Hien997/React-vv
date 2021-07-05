@@ -1,0 +1,28 @@
+export const ProviderPhone = [
+  {
+    city: 'USA',
+    data: [
+      { value: '000', label: 'Please Select' },
+      { value: '001', label: 'AT&T' },
+      { value: '002', label: 'T-Mobile' },
+      { value: '003', label: 'Verizon' },
+      { value: '004', label: 'Sprint' },
+      { value: '005', label: 'Xfinity Mobile' },
+      { value: '006', label: 'Virgin Mobile' },
+      { value: '007', label: 'Tracfone' },
+      { value: '008', label: 'Simple Mobile' },
+      { value: '009', label: 'Mint Mobile' },
+      { value: '010', label: 'Red Pocket' },
+      { value: '011', label: 'Metro PCS' },
+      { value: '012', label: 'Boost Mobile' },
+      { value: '013', label: 'Cricket' },
+      { value: '014', label: 'Republic Wireless' },
+      { value: '015', label: 'Google Fi (Project Fi)' },
+      { value: '016', label: 'U.S. Cellular' },
+      { value: '017', label: 'Ting' },
+      { value: '018', label: 'Consumer Cellular' },
+      { value: '019', label: 'C-Spire' },
+      { value: '020', label: 'Page Plus' },
+    ],
+  },
+];
